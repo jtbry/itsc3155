@@ -69,7 +69,7 @@ class SandwichMachine:
            Hint: use the output of process_coins() function for cost input"""
         if coins >= cost:
             # calculate potential change by rounding the difference to 2 decimal places
-            change = round(coins - cost, 2)
+            change = coins - cost
             if change > 0:
                 # if there is change, print it
                 print(f"Here is ${change} in change.")
