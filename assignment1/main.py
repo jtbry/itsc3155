@@ -49,6 +49,7 @@ class SandwichMachine:
             # Iterate all ingredients
             if self.machine_resources[k] < ingredients[k]:
                 # If any resource is less than the required amount, return False
+                print(f"Sorry, there is not enough {k}.")
                 return False
         return True
 
@@ -103,9 +104,6 @@ while choice != "off":
             else:
                 # If we are not given enough money, do nothing
                 print("Sorry that's not enough money. Money refunded.")
-        else:
-            # If there is not enough resources, do nothing
-            print(f"Not enough ingredients to make a {choice} sandwich.")
     elif choice == "off":
         # If the user wants to turn off the machine, break the loop
         break
