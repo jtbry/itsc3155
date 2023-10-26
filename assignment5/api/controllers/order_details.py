@@ -7,8 +7,7 @@ def create(db: Session, order_detail):
     db_order_detail = models.OrderDetail(
         order_id=order_detail.order_id,
         sandwich_id=order_detail.sandwich_id,
-        resource_id=order_detail.resource_id,
-        quantity=order_detail.quantity
+        amount=order_detail.amount
     )
     
     # Add the newly created OrderDetail object to the database session
